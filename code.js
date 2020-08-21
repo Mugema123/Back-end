@@ -48,7 +48,7 @@ router.post('/v1/blogs/new', async (req, res) => {
         if (req.body.content != null) {
           res.data.content = req.body.content
         }
-      try { 
+      try {
         const updatedNews = await res.data.save()
         res.json(updatedNews)
       } catch (err) {

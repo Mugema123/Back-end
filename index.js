@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 
 // Connect to MongoDB database
 mongoose.connect("mongodb://localhost:27017/News", { useNewUrlParser: true }).then(() =>{
-
+ 
     
 app.use(express.json());
 

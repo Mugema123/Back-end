@@ -5,7 +5,7 @@ const schema = mongoose.Schema({
     type: String,
     required: true
   },
-  Writter: {
+  Writter: { 
     type: String,
     required: true
   },
