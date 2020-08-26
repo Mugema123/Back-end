@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const news = require("../models/news");
+const news = require("../signin/models/news");
 const prot = require("../signin/routes/user");
 
 // Getting all
