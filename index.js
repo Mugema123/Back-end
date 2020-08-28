@@ -31,6 +31,6 @@ mongoose
 app.use("/", blog);
 app.use("/user", userRoutes);
 
-app.listen(5050, () => {
-  console.log("<< localhost:5050>>");
+app.listen(3000, () => {
+  console.log("<< localhost:3000>>");
 });
