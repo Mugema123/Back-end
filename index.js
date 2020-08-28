@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
 //connect("mongodb://localhost:27017/News", { useNewUrlParser: true })
 // Connect to MongoDB database
 mongoose
-  .connect("mongodb+srv://Mugema:M50nF742OTqlkRvt@cluster0.s89cn.mongodb.net/myBrand?retryWrites=true&w=majority", { useNewUrlParser: true })
+  .connect("mongodb+srv://Mugema:M50nF742OTqlkRvt@cluster0.s89cn.mongodb.net/myBrand?retryWrites=true&w=majority", { useNewUrlParser: true,useUnifiedTopology: true })
   .then(() => {
     console.log("connected to db");
   })
