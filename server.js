@@ -7,16 +7,7 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-app.use(morgan("dev"));
-app.use(bodyParser.json());
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
+
 //mongodb+srv://Mugema:<password>@cluster0.s89cn.mongodb.net/<dbname>?retryWrites=true&w=majority
 //connect("mongodb://localhost:27017/News", { useNewUrlParser: true })
 // Connect to MongoDB database
@@ -30,6 +21,17 @@ mongoose
   });
   app.get('/', (req, res) => {
     res.json({"message": "Welcome to Backend. "});
+});
+
+app.use(morgan("dev"));
+app.use(bodyParser.json());
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
 });
  
 app.use("/", blog);
