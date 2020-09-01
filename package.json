@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node server.js",
+    "start": "node server.js",
     "start:dev": "nodemon --exec babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,10 +31,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.1",
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
     "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-env": "^7.11.5",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.4"
   }
