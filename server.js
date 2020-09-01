@@ -37,6 +37,7 @@ app.use(function (req, res, next) {
 app.use("/", blog);
 app.use("/user", userRoutes);
 
-app.listen(5000, () => {
-  console.log("<< localhost:5000>>");
-});
+const port = process.env.PORT || 5000;
+ app.listen(port, () => {
+     console.log(`Server is listening on port ${port}....`);
+ });
