@@ -28,7 +28,10 @@ mongoose
   .catch(() => {
     console.log("connection has failed");
   });
-
+  app.get('/', (req, res) => {
+    res.json({"message": "Welcome to Backend. "});
+});
+ 
 app.use("/", blog);
 app.use("/user", userRoutes);
 
