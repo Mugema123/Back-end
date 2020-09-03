@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const news = require("../models/news");
-
+const prot = require("../signin/routes/user");
 
 // Getting all
 router.get('/v1/blogs', async (req, res) => {
@@ -48,7 +48,7 @@ router.post('/v1/blogs/new', async (req, res) => {
         if (req.body.content != null) {
           res.data.content = req.body.content
         }
-      try {
+      try { 
         const updatedNews = await res.data.save()
         res.json(updatedNews)
       } catch (err) {

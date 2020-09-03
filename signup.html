@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Brand</title>
+    <style >
+    *{
+    		margin: 0px;
+    		padding: 0px;
+    	}
+
+    	*{
+  box-sizing:border-box;
+}
+
+
+    	html, body{
+    		height: 100%;
+    	}
+#container{
+	min-height: 100%;
+}
+#main-session{
+	overflow: auto;
+	margin-top: 80px;
+	text-align: center;
+	
+}
+
+.nav {
+		
+		background-color: black;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 20px;
+
+	}	
+
+.nav-link ul {
+     float: right;
+	display: inline-flex;
+	
+	list-style: none;
+}
+.nav-link a {
+
+	text-decoration: none;
+	margin: 10px;
+	color: white;
+	font-size: 17px;
+	padding: 20px;
+}
+
+.nav a:hover {
+  background: #ddd;
+  color: black;
+}
+
+form {
+	max-width:500px;
+    background-color:#E5E5E5;
+    margin:0 auto;
+	padding: 20px;
+	border-radius:5px;
+    box-shadow:2px 8px 10px  #00AAFF;
+}
+
+label {
+	display: block;
+	padding: 10px;
+}
+
+.control-form {
+
+	text-align: left;
+	margin-top:5px;
+}
+.control-form input, .control-form textarea ,.control-form button{
+
+	display: block;
+	width:100%;
+    padding:5px;
+    border-radius:3px;
+    border-color:#00AAFF;
+
+	
+}
+.control-form input [type= checkbox] {
+    float: left;
+    margin-top: 100px;
+}
+.control-form button{
+	margin-top: 10px;
+	background-color: #00AAFF;
+	font-size: 20px; 
+}
+
+.control-form a{
+    text-decoration: none;
+}
+
+#footer {
+	background-color: black;
+	color: white;
+	position: relative;
+	
+	text-align: center;
+	clear: both;
+}
+
+#footer ul {
+
+	display: inline-flex;
+	padding: 10px;
+	list-style: none;
+
+}
+
+#footer li{
+	margin: 9px;
+}
+
+#footer a{
+
+
+	text-decoration: none;
+		color: white;
+	font-size: 17px;
+	
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+	<header class="nav">
+
+		<nav class="nav-link">
+			
+			<ul>
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="About.html">About</a></li>
+				<li><a href="signup.html">Register</a></li>
+				<li><a href="signin.html">Log-in</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="#">Process</a></li>
+			</ul>
+	
+		</nav>
+	
+	</header>
+	
+	<div id="container">
+		
+		<div id="main-session">
+			
+			<h1>Register User-form</h1>
+	
+	<form id="form2">
+	
+		<div class="control-form">
+			 <div>
+			<label>Full Name</label>
+	
+	
+			<input type="text" name="first name" placeholder="Enter your full name" required>
+			  </div>
+	
+			  <div >
+			<label>Email</label>
+			<input type="text" id="email-signup"  name="email" placeholder="Enter your Email" required>
+			 </div>
+	
+			  <div>
+			<label>Password</label>
+			<input type="text" id="passcode-signup" name="password" placeholder="Enter your Password" required>
+			 </div>
+	
+			 <div>
+			<label>Repeat password</label>
+			<input type="text" name="password" placeholder="Repeat your password " required>
+			 </div>
+	
+			 <div>
+                <input type="checkbox"  name="terms" value="terms">
+			<label><p>I have read and agree to <a href="#">terms and conditions</a></p></label>
+			
+			 </div>
+			  
+			<button type="submit"> Register</button>
+			<input type="reset" value="Reset">
+	
+	
+			
+	</div>
+	
+		</form>
+	
+	
+	
+	
+		</div>
+	</div>
+	
+	<footer id="footer">
+		
+	
+		<ul>
+			
+			<li><a href="#"> Team</a></li>
+				<li><a href="#">contact</a></li>
+		</ul>
+				
+				
+			
+	
+	
+	</footer>
+	
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> 
+    
+    
+    
+	<script src="signup.js"></script>
+	<script src="fetch.js"></script>
+
+
+
+</body>
+</html>
